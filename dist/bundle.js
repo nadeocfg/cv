@@ -2,10 +2,22 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/bootstrap/dist/css/bootstrap.min.css":
-/*!***********************************************************!*\
-  !*** ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
-  \***********************************************************/
+/***/ "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css":
+/*!****************************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap-grid.min.css ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css":
+/*!******************************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -72,12 +84,28 @@ var __webpack_exports__ = {};
   !*** ./src/js/index.js ***!
   \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sass_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/index.sass */ "./src/sass/index.sass");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_reboot_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap-reboot.min.css */ "./node_modules/bootstrap/dist/css/bootstrap-reboot.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_grid_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap-grid.min.css */ "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css");
+/* harmony import */ var _sass_index_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/index.sass */ "./src/sass/index.sass");
 
 
 
-console.log("Run 123");
+
+const overlay = document.querySelector(".overlay");
+const avatar = document.querySelector(".avatar");
+
+window.addEventListener("mousemove", (e) => {
+  const x = Math.round(e.x / 100);
+  const y = Math.round(e.y / 100);
+
+  avatar.style.transform = `translate(${x - 5}px, ${Math.round(
+    y - 5
+  )}px) scale(1.1)`;
+});
+
+window.addEventListener("load", function () {
+  overlay.style.display = "none";
+});
 
 })();
 
